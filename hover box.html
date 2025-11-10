@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Box on Right</title>
+<style>
+  * {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+
+  .hover-area {
+    display: inline-block;
+    padding: 40px 60px;
+    background-color: #4da6ff;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative; /* important for positioning the box */
+  }
+
+  .hover-box {
+    position: absolute;
+    top: 50%;
+    left: 105%; /* push to the right side */
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  /* optional arrow pointing left toward the hover area */
+  .hover-box::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+  }
+
+    .hover-area:hover .hover-box {
+    opacity: 1;
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="hover-area">
+  Hover over me
+  <div class="description-box">
+    This box appears on the right side when you hover!
+  </div>
+</div>
+
+</body>
+</html>

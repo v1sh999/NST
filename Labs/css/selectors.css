@@ -1,0 +1,38 @@
+/*stuff like desendent or farther grandfarther selectors 
+
+
+
+a space b) parent tag shenanegins
+and normal stuff (a , b)
+and same thingy inside that thing (a . b)
+/*also stuff like a > b (direct child selector) and a + b (adjacent sibling selector) and a ~ b (general sibling selector)*/
+
+max-width: 1512px;
+background-position: center;
+background-size: cover;
+margin: auto;
+
+grid-template-columns: repeat(2,30px) 100px 1fr;
+grid-template-rows: 50px 100px 100px 1fr auto;
+grid-auto-rows: 1fr;
+grid-area: 1 / 2 / 4 / 5;
+grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "nav footer footer";
+
+justify-content: center;
+align-content: center;
+align-items: center;
+
+display: inline-flex;
+flex-direction: row;
+flex-direction: column-reverse;
+justify-content: center;
+justify-content: space-between;
+justify-content: flex-end;
+flex-wrap:wrap;
+order: 1;
+align-self: flex-start;
+flex-grow: 1;
+z-index: 1
